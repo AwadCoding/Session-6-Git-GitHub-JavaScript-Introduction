@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#AB2020">
+  <title>SCCI'27 — Git & JavaScript Fundamentals</title>
+  <link rel="stylesheet" href="css/style.css?v=1795635682833">
+</head>
+<body>
+  <main class="stage" aria-label="SCCI technical training presentation">
+    <div class="deck" id="deck">
+      <section class="slide opening active" data-title="Opening">
+        <div class="opening-brand"><img src="assets/scci-logo.png" alt="SCCI Students' Conference on Communication and Information logo"></div>
+        <div class="opening-copy">
+          <p class="eyebrow">SCCI'27 · IT COMMUNITY</p>
+          <p class="phase">PHASE 02 / WEB DEVELOPMENT ESSENTIALS</p>
+          <h1>Git <span>&</span><br>JavaScript Fundamentals</h1>
+          <p class="subtitle">Session 01 · From Static Websites to Interactive Web Experiences</p>
+          <p class="tagline">Managing Code. <strong>Building Interactive Experiences.</strong></p>
+        </div>
+        <div class="opening-foot"><span>2-HOUR TECHNICAL TRAINING</span><span class="key-hint">← → navigate&nbsp; · &nbsp;N presenter notes&nbsp; · &nbsp;F fullscreen</span></div>
+      </section>
+
+      <section class="slide" data-title="Learning journey">
+        <p class="eyebrow">TODAY'S PLAN</p><h2>What Are We Going to Learn?</h2>
+        <p class="lead">Four stages. One step closer to working like a developer.</p>
+        <div class="journey">
+          <article class="journey-step"><b>01</b><span class="step-line"></span><h3>Understand</h3><p>Version Control</p></article>
+          <article class="journey-step"><b>02</b><span class="step-line"></span><h3>Collaborate</h3><p>Git & GitHub</p></article>
+          <article class="journey-step"><b>03</b><span class="step-line"></span><h3>Bring to life</h3><p>JavaScript Basics</p></article>
+          <article class="journey-step"><b>04</b><span class="step-line"></span><h3>Apply</h3><p>Practical Task</p></article>
+        </div>
+        <div class="callout">Two core parts: <strong>manage your code</strong> + <strong>make your website interactive.</strong></div>
+      </section>
+
+      <section class="slide" data-title="Why version control">
+        <p class="eyebrow">01 / VERSION CONTROL</p><h2>Why Version Control?</h2>
+        <div class="split">
+          <div class="problem-panel"><span class="mini-label">THE SCENARIO</span><h3>You changed the website…<br><em>and now it is broken.</em></h3><ul class="question-list"><li>How do you return to a working version?</li><li>What exactly changed?</li><li>How can teammates work together?</li><li>Where is the project's history?</li></ul></div>
+          <div class="solution-panel"><span class="mini-label">THE SOLUTION</span><h3>Version Control System <span class="red">(VCS)</span></h3><p>A system that records changes to files over time.</p><div class="versions"><div>V1</div><i>→</i><div>V2</div><i>→</i><div>V3</div><i>→</i><div class="current">V4</div></div><ul class="compact-list"><li>Track changes</li><li>Restore previous versions</li><li>Understand project history</li><li>Collaborate safely</li></ul><p class="small-note">Git is one of the most widely used VCS tools.</p></div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Git vs GitHub">
+        <p class="eyebrow">02 / THE TOOLS</p><h2>Git vs GitHub</h2>
+        <div class="compare">
+          <article class="compare-card git-card"><div class="compare-mark">GIT</div><h3>Git</h3><p class="descriptor">The version control system</p><ul><li>Installed and used locally</li><li>Tracks changes in project files</li><li>Creates commits and branches</li><li>Works without GitHub</li></ul></article>
+          <div class="versus">VS</div>
+          <article class="compare-card github-card"><div class="compare-mark">GH</div><h3>GitHub</h3><p class="descriptor">A platform for hosting Git repositories</p><ul><li>Hosts projects in the cloud</li><li>Makes sharing easier</li><li>Supports team collaboration</li><li>Includes Pull Requests and Issues</li></ul></article>
+        </div>
+        <div class="statement">Git manages your project history. <strong>GitHub helps you host and collaborate</strong> on that project.</div>
+      </section>
+
+      <section class="slide" data-title="Git concepts">
+        <p class="eyebrow">03 / CORE CONCEPTS</p><h2>Before Using Git, Understand These Concepts</h2>
+        <div class="concept-grid">
+          <article><b>01</b><h3>Repository</h3><p>A project folder tracked by Git.</p></article>
+          <article><b>02</b><h3>Commit</h3><p>A saved snapshot of changes in your local repository.</p></article>
+          <article><b>03</b><h3>Remote Repository</h3><p>A repository hosted somewhere else, such as GitHub.</p></article>
+          <article><b>04</b><h3>Working Directory</h3><p>The files you are currently working on.</p></article>
+          <article><b>05</b><h3>Staging Area</h3><p>The place where you prepare changes before committing them.</p></article>
+        </div>
+        <div class="mini-flow"><span>Working files</span><b>→</b><span>Staging</span><b>→</b><span>Commit history</span><b>→</b><span>Remote</span></div>
+      </section>
+
+      <section class="slide" data-title="Git workflow">
+        <p class="eyebrow">04 / THE WORKFLOW</p><h2>How Does Git Work?</h2>
+        <p class="lead">Move changes through four clear places.</p>
+        <div class="workflow">
+          <article><span class="workflow-num">01</span><h3>Working Directory</h3><p>Modify your files.</p><code>git status</code></article><b class="flow-arrow">→</b>
+          <article><span class="workflow-num">02</span><h3>Staging Area</h3><p>Select changes for the next commit.</p><code>git add</code></article><b class="flow-arrow">→</b>
+          <article><span class="workflow-num">03</span><h3>Local Repository</h3><p>Save a commit in local history.</p><code>git commit</code></article><b class="flow-arrow">→</b>
+          <article><span class="workflow-num">04</span><h3>Remote Repository</h3><p>Send commits to GitHub.</p><code>git push</code></article>
+        </div>
+        <div class="callout"><strong>add</strong> stages · <strong>commit</strong> saves locally · <strong>push</strong> sends to remote</div>
+      </section>
+
+      <section class="slide" data-title="First repository">
+        <p class="eyebrow">05 / HANDS-ON GIT</p><h2>Let's Start Using Git</h2>
+        <div class="code-layout">
+          <div class="code-card"><div class="code-top"><span>TERMINAL · INITIAL SETUP</span><i></i><i></i><i></i></div><pre><code>git --version
+git init
+git status</code></pre><div class="code-top secondary-top">STAGE YOUR FILES</div><pre><code><span class="comment"># Stage one specific file</span>
+git add index.html
+
+<span class="comment"># Stage changes in this directory</span>
+git add .</code></pre></div>
+          <div class="explain-list"><article><code>git --version</code><p>Checks whether Git is installed.</p></article><article><code>git init</code><p>Initializes a new Git repository. Usually once per project.</p></article><article><code>git status</code><p>Shows the state of the working directory and staging area.</p></article><article><code>git add</code><p>Choose a specific file or stage current-directory changes with <code>.</code>.</p></article></div>
+        </div>
+        <p class="small-note">Always understand what you are staging before creating a commit.</p>
+      </section>
+
+      <section class="slide" data-title="Commits">
+        <p class="eyebrow">06 / SAVE YOUR PROGRESS</p><h2>Save Your Progress</h2>
+        <div class="commit-layout">
+          <div class="code-card"><div class="code-top"><span>TERMINAL · COMMIT</span><i></i><i></i><i></i></div><pre><code>git add .
+git commit -m "Add portfolio homepage"
+git log</code></pre><p class="code-caption">A commit is a meaningful checkpoint in your project's history.</p></div>
+          <div class="message-comparison"><div><h3 class="bad-title">Avoid vague messages</h3><p class="bad">“update”</p><p class="bad">“test”</p><p class="bad">“final”</p><p class="bad">“changes”</p></div><div><h3 class="good-title">Be specific</h3><p class="good">Add homepage layout</p><p class="good">Fix navigation links</p><p class="good">Update contact section</p><p class="good">Add responsive styles</p></div></div>
+        </div>
+        <div class="statement">A good commit message <strong>explains what changed.</strong></div>
+      </section>
+
+      <section class="slide" data-title="Connect GitHub">
+        <p class="eyebrow">07 / LOCAL TO REMOTE</p><h2>Connecting Git to GitHub</h2>
+        <div class="local-remote"><div><b>LOCAL PROJECT</b><span>Your computer</span></div><i>→</i><div><b>GIT COMMIT</b><span>Saved checkpoint</span></div><i>→</i><div class="remote-box"><b>GITHUB REPOSITORY</b><span>Hosted online</span></div></div>
+        <div class="code-layout github-commands"><div class="code-card"><div class="code-top"><span>FIRST PUSH</span><i></i><i></i><i></i></div><pre><code>git branch -M main
+git remote add origin YOUR_REPOSITORY_URL
+git push -u origin main</code></pre><div class="code-top secondary-top">AFTER INITIAL SETUP</div><pre><code>git add .
+git commit -m "Describe your changes"
+git push</code></pre></div>
+          <div class="explain-list"><article><code>branch -M main</code><p>Renames the current branch to <b>main</b>.</p></article><article><code>remote add origin</code><p>Adds a remote repository named <b>origin</b>.</p></article><article><code>push -u origin main</code><p>Pushes main and sets its upstream tracking branch.</p></article></div></div>
+        <p class="small-note">Create the GitHub repository first. Replace the URL, authenticate if prompted, and note that first-push steps vary if the remote already has commits.</p>
+      </section>
+
+      <section class="slide" data-title="Workflow challenge">
+        <p class="eyebrow">08 / QUICK KNOWLEDGE CHECK</p><h2>Can You Follow the Workflow?</h2>
+        <p class="lead">You changed your portfolio homepage. Put the actions in the correct order.</p>
+        <div class="challenge">
+          <div class="challenge-options"><div><span>01</span> Push changes to GitHub</div><div><span>02</span> Modify project files</div><div><span>03</span> Stage changes</div><div><span>04</span> Create a commit</div></div>
+          <div class="challenge-answer" id="challengeAnswer" hidden><p class="mini-label">CORRECT SEQUENCE</p><ol><li>Modify project files</li><li>Stage changes — <code>git add</code></li><li>Create a commit — <code>git commit</code></li><li>Push — <code>git push</code></li></ol></div>
+        </div>
+        <button class="reveal-btn" id="revealAnswer" type="button">Reveal the correct order <span>↗</span></button>
+        <p class="small-note">Pause here. Let members answer through voice or chat before revealing.</p>
+      </section>
+
+      <section class="slide" data-title="HTML CSS JavaScript">
+        <p class="eyebrow">09 / JAVASCRIPT INTRODUCTION</p><h2>Your Website Is Ready… But Is It Interactive?</h2>
+        <div class="tech-stack">
+          <article><div class="tech-symbol">H</div><h3>HTML</h3><b>Structure</b><p>Defines the content and structure of a webpage.</p><div class="example-pill">The button exists</div></article>
+          <article><div class="tech-symbol">C</div><h3>CSS</h3><b>Presentation</b><p>Controls layout, colors, typography, and appearance.</p><div class="example-pill">The button looks good</div></article>
+          <article class="js-tech"><div class="tech-symbol">JS</div><h3>JavaScript</h3><b>Behavior</b><p>Adds logic, interaction, and dynamic behavior.</p><div class="example-pill">The button does something</div></article>
+        </div>
+        <div class="callout">Clicks · Form validation · Dynamic content · Interactive menus</div>
+        <div class="statement">JavaScript <strong>makes websites interactive.</strong></div>
+      </section>
+
+      <section class="slide" data-title="Connect JavaScript">
+        <p class="eyebrow">10 / CONNECTING FILES</p><h2>How to Add JavaScript to Your Website</h2>
+        <div class="connect-grid">
+          <div class="file-tree"><p class="mini-label">PROJECT STRUCTURE</p><pre>my-website/
+│
+├── index.html
+├── style.css
+└── script.js</pre><div class="file-note">Keep structure, styling, and behavior organized in separate files.</div></div>
+          <div class="code-card"><div class="code-top"><span>INDEX.HTML</span><i></i><i></i><i></i></div><pre class="small-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello JavaScript&lt;/h1&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="code-top secondary-top">SCRIPT.JS</div><pre><code>console.log("Hello from JavaScript!");</code></pre></div>
+        </div>
+        <div class="bottom-tip"><b>Another common option:</b> <code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code> in the head. The <code>src</code> value must point to the correct file path.</div>
+      </section>
+
+                  <section class="slide" data-title="Variables and data types">
+        <p class="eyebrow">11 / JAVASCRIPT BASICS</p><h2>Storing Information with JavaScript</h2>
+        <div class="variables-top">
+          <article class="variable-card"><div class="var-heading"><b>let</b><span>REASSIGNABLE</span></div><p>Use when the variable may be reassigned.</p><pre><code>let username = "Mahmoud";
+username = "Ahmed";</code></pre></article>
+          <article class="variable-card"><div class="var-heading"><b>const</b><span>NO REASSIGNMENT</span></div><p>Use when the binding should not be reassigned.</p><pre><code>const community = "SCCI";</code></pre></article>
+        </div>
+        <p class="mini-label types-label">BASIC DATA TYPES</p>
+        <div class="types-grid">
+          <article><b>String</b><code>"Mahmoud"</code></article><article><b>Number</b><code>22</code></article><article><b>Boolean</b><code>true</code></article><article><b>Undefined</b><code>let score;</code></article><article><b>Null</b><code>null</code></article>
+        </div>
+        <p class="small-note">Note: <code>const</code> prevents reassignment of the binding, not mutation of an object or array.</p>
+      </section>
+
+      <section class="slide" data-title="Browser console">
+        <p class="eyebrow">12 / FIRST DEBUGGING TOOL</p><h2>Meet Your First Debugging Tool</h2>
+        <div class="console-layout">
+          <div class="code-card"><div class="code-top"><span>JAVASCRIPT</span><i></i><i></i><i></i></div><pre><code>console.log("Hello SCCI!");
+console.log("JavaScript is working");
+
+let name = "Mahmoud";
+let age = 22;
+
+console.log(name);
+console.log(age);</code></pre></div>
+          <div class="console-demo"><div class="browser-bar"><span>● ● ●</span><b>Developer Tools</b></div><div class="tabs">Elements&nbsp;&nbsp; <strong>Console</strong>&nbsp;&nbsp; Sources</div><div class="console-output"><p><i>&gt;</i> Hello SCCI!</p><p><i>&gt;</i> JavaScript is working</p><p><i>&gt;</i> Mahmoud</p><p><i>&gt;</i> 22</p><p class="prompt">&gt; <span></span></p></div></div>
+        </div>
+        <div class="console-bottom"><span><b>Open it:</b> Right-click → Inspect → Console</span><span><b>Windows:</b> Ctrl + Shift + J</span><span><b>Mac:</b> ⌘ + Option + J</span></div>
+        <p class="small-note"><code>console.log()</code> prints values so you can inspect and test your code while debugging.</p>
+      </section>
+
+            <section class="slide" data-title="Practical assignment">
+        <p class="eyebrow">PRACTICAL ASSIGNMENT</p><h2>Your First GitHub Project 🚀</h2>
+        <p class="lead">Apply what you've learned and make your work publicly accessible.</p>
+        
+        <div class="split assignment-split">
+          <div class="problem-panel assignment-panel">
+            <span class="mini-label">ASSIGNMENT REQUIREMENTS</span>
+            <ul class="compact-list assignment-checklist">
+              <li><strong>GitHub Setup:</strong> Create account & new repository for your project</li>
+              <li><strong>File Organization:</strong> Upload and organize project structure cleanly</li>
+              <li><strong>Documentation:</strong> Write a professional <code>README.md</code> (overview, tech, features, run guide)</li>
+              <li><strong>Deployment:</strong> Publish and test live website using <strong>GitHub Pages</strong></li>
+              <li><strong>Portfolio Integration:</strong> Feature the project inside your Portfolio with details & preview</li>
+            </ul>
+          </div>
+          
+          <div class="solution-panel assignment-panel">
+            <span class="mini-label">EXPECTED DELIVERABLES</span>
+            <div class="deliverables-box">
+              <div><b>01</b> <span>GitHub Repository URL</span></div>
+              <div><b>02</b> <span>Live Website URL (GitHub Pages)</span></div>
+              <div><b>03</b> <span>Portfolio URL (Project Section)</span></div>
+              <div><b>04</b> <span>Screenshot of Published Website</span></div>
+            </div>
+            
+            <span class="mini-label" style="margin-top: 5%;">LEARNING OUTCOMES</span>
+            <ul class="compact-list outcomes-list">
+              <li>Repository Management & Proper Git Structure</li>
+              <li>Professional Project Documentation & Deployment</li>
+              <li>Showcasing & Presenting Work in Personal Portfolio</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="callout assignment-callout">
+          <strong>Key Objective:</strong> Take ownership of your code, deploy it to production, and showcase it to the world.
+        </div>
+      </section>
+
+      <section class="slide closing" data-title="Assessment and closing">
+        <p class="eyebrow">14 / WRAP-UP</p><h2>What Comes Next?</h2>
+        <div class="closing-columns">
+          <article><span class="mini-label">SELF-STUDY</span><h3>Explore next</h3><ul><li>Git branching</li><li>Pull Requests</li><li><code>.gitignore</code></li><li>Basic merge conflicts</li></ul><p class="tiny-note">Self-study topics — not core hands-on requirements today.</p></article>
+          <article><span class="mini-label">SESSION CHECK</span><h3>You should now be able to…</h3><ul><li>Explain Git vs GitHub</li><li>Describe the repository workflow</li><li>Explain add, commit, and push</li><li>Connect JavaScript to HTML</li><li>Declare variables and identify data types</li><li>Use <code>console.log()</code></li></ul></article>
+        </div>
+        <div class="closing-message">Don't just write code.<br><strong>Learn how to manage, understand, and improve it.</strong></div>
+        <div class="closing-brand"><img src="assets/scci-logo.png" alt="SCCI logo"><span>SCCI'27 · IT COMMUNITY</span></div>
+      </section>
+    </div>
+
+    <div class="chrome">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="chrome-bottom">
+        <div class="deck-label"><span class="brand-dot"></span>SCCI'27 <i>/</i> IT COMMUNITY</div>
+        <div class="controls">
+          <button id="prevBtn" aria-label="Previous slide" title="Previous slide (←)">←</button>
+          <span class="counter" id="counter">01 <i>/</i> 16</span>
+          <button id="nextBtn" aria-label="Next slide" title="Next slide (→)">→</button>
+          <button id="notesBtn" class="utility" aria-label="Toggle presenter notes" title="Presenter notes (N)">NOTES</button>
+          <button id="fullBtn" class="utility fullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)">⛶</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="notes-panel" id="notesPanel" aria-label="Presenter notes" aria-hidden="true">
+    <div class="notes-head"><div><span class="mini-label">INSTRUCTOR VIEW</span><h2>Presenter Notes</h2></div><button id="closeNotes" aria-label="Close notes">×</button></div>
+    <div class="notes-meta" id="notesMeta">SLIDE 01 / 16</div>
+    <div class="notes-content" id="notesContent"></div>
+    <div class="notes-foot">Shortcut: <kbd>N</kbd> to toggle · <kbd>←</kbd> <kbd>→</kbd> to navigate</div>
+  </aside>
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

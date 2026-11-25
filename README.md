@@ -70,3 +70,4 @@ All 16 requested slides are included in order:
 - Layout is designed around a 16:9 presentation canvas and adapts for smaller screens.
 - Reduced-motion preferences are respected.
 "# Session-6-Git-GitHub-JavaScript-Introduction" 
+"# Session-ffg-CSS-Fundamentals-Styling-the-Web" 
